@@ -5,7 +5,7 @@ import fs from 'fs';
 const app = express();
 const port = 3000;
 
-app.get('/video/:filename', (req: Request, res: Response) => {
+app.get('/video', (req: Request, res: Response) => {
     // Garantir que 'filename' é uma string
     const filename = Array.isArray(req.params.filename) ? req.params.filename[0] : req.params.filename;
 
